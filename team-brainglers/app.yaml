@@ -8,10 +8,16 @@ handlers:
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
-
+- url: /static
+  static_dir: static
 - url: .*
   script: main.app
+  login: required
+
+
 
 libraries:
 - name: webapp2
   version: "2.5.2"
+- name: oauth2
+- name: httplib2
